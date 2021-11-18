@@ -1,0 +1,34 @@
+.btn-tomato {
+  padding: 14px 40px;
+  border-radius: 30px;
+  background-color: #FB4C47;
+  color: #fff;
+  border: 3px solid #FB4C47;
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+}
+
+.btn-tomato:hover {
+  background-color: #FFF;
+  color: #FB4C47;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+.btn-tomato-light {
+  padding: 14px 40px;
+  border-radius: 30px;
+  background-color: rgba(250, 86, 82, 0.15);
+  color: #FB4C47;
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+  border: 3px  solid #fff;
+}
+
+.btn-tomato-light:hover {
+  background-color: #FFF;
+  color: #FB4C47;
+  font-weight: 600;
+  border: 3px solid #FB4C47;
+  transition: all 0.3s ease-out;
+}

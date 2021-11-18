@@ -1,0 +1,44 @@
+.pricing__section {
+  padding: 100px 0 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.precautions__container {
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.pricing__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.precautions-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.precautions-row > div > h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #035755;
+}
+
+.precautions-row > div > p {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #4B4F51;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 960px) {
+
+}
+  
