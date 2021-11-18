@@ -99,6 +99,10 @@ img {
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  .covidImage {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {

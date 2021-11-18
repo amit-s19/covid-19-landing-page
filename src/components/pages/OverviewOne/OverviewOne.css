@@ -94,7 +94,7 @@
     }
     
     @media screen and (max-width: 991px) {
-      .container {
+      .container-fluid {
         padding-right: 30px;
         padding-left: 30px;
       }
