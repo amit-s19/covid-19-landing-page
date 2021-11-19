@@ -1,128 +1,58 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from '../../Button';
-import { Link } from 'react-router-dom';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin
-} from 'react-icons/fa';
-import { MdFingerprint } from 'react-icons/md';
 
 function Footer() {
   return (
     <div className='footer-container'>
+      <div className="csmlight">
+        <img src="images/csmlight.png" />
+      </div>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join our exclusive membership to receive the latest news and trends
+          Have Question in mind?
         </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+        <p className='footer-subscription-heading'>
+          Let us help you
         </p>
         <div className='input-areas'>
           <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <div className="form-wrapper">
+              <input
+                className='footer-input'
+                type='email'
+                placeholder='snmonydemo@gmail.com'
+              />
+              <div className='btn-wrapper'>
+                <btn>Send</btn>
+              </div>
+            </div>
           </form>
         </div>
       </section>
-      <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
-        </div>
+      <div className="csmlight2">
+        <img src="images/csmlight2.png" />
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to='/' className='social-logo'>
-              <MdFingerprint className='navbar-icon' />
-              LAVISH
-            </Link>
+            <div className='social-logo'>
+              <img src="images/covIcon.png" />&nbsp;&nbsp;
+              COVID-19
+            </div>
           </div>
-          <small className='website-rights'>LAVISH © 2020</small>
+          <small className='footer-tab-links'>Overview</small>
+          <small className='footer-tab-links'>Symptoms</small>
+          <small className='footer-tab-links'>Prevention</small>
+          <small className='footer-tab-links'>Treatment</small>
           <div className='social-icons'>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <FaFacebook />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <FaInstagram />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to={
-                '//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
-              }
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <FaYoutube />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <FaTwitter />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <FaLinkedin />
-            </Link>
+            <img src="images/fb.png" />
+            <img src="images/yt.png" />
+            <img src="images/vm.png" />
+            <img src="images/twitter.png" />
           </div>
         </div>
       </section>
+      <p className="copyright">2020 @ All rights reserved by pixelspark.co</p>
     </div>
   );
 }

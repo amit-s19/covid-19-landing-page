@@ -35,7 +35,7 @@ function Navbar() {
                     <div className='navbar-container container'>
                         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                             <MdFingerprint className='navbar-icon' />
-                            LAVISH
+                            COVID-19
                         </Link>
                         <div className='menu-icon' onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
@@ -43,7 +43,7 @@ function Navbar() {
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
                                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                                    Home
+                                    Overview
                                 </Link>
                             </li>
                             <li className='nav-item'>
@@ -52,7 +52,7 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Services
+                                    Contagion
                                 </Link>
                             </li>
                             <li className='nav-item'>
@@ -61,7 +61,16 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Products
+                                    Symptoms
+                                </Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link
+                                    to='#'
+                                    className='nav-links'
+                                    onClick={closeMobileMenu}
+                                >
+                                    Prevention
                                 </Link>
                             </li>
                             <li className='nav-btn'>
