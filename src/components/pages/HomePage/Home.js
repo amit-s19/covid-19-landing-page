@@ -1,19 +1,20 @@
 import React from 'react';
-import { overviewOne, homeObjTwo, overviewTwo, homeObjFour } from './Data';
-import Pricing from '../../Pricing';
+import Contagion from '../Contagion/Contagion';
 import OverviewOne from '../OverviewOne/OverviewOne';
 import OverviewTwo from '../OverviewTwo/OverviewTwo';
 import Symptoms from '../Symptoms/Symptoms';
 import Precautions from '../Precautions/Precautions';
+import Worldmap from '../Worldmap/Worldmap';
 
 function Home() {
   return (
     <>
       <OverviewOne />
       <OverviewTwo />
-      <Pricing />
+      <Contagion />
       <Symptoms />
       <Precautions />
+      <Worldmap />
     </>
   );
 }

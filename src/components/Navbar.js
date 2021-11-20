@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
-import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import tabContext from './TabContext';
+
 
 function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-
+    const { tab } = useContext(tabContext);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
@@ -22,6 +22,7 @@ function Navbar() {
     };
 
     useEffect(() => {
+
         showButton();
         window.addEventListener('resize', showButton);
         return window.removeEventListener('resize', showButton)
@@ -33,62 +34,55 @@ function Navbar() {
             <IconContext.Provider value={{ color: '#fff' }}>
                 <nav className='navbar'>
                     <div className='navbar-container container'>
-                        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                            <MdFingerprint className='navbar-icon' />
+                        <div className='navbar-logo'>
+                            <img src="images/covIcon.png" style={{ maxWidth: 50 }} /> &nbsp;&nbsp;
                             COVID-19
-                        </Link>
+                        </div>
                         <div className='menu-icon' onClick={handleClick}>
-                            {click ? <FaTimes /> : <FaBars />}
+                            {click ? <FaTimes style={{ color: '#035755' }} /> : <FaBars style={{ color: '#035755' }} />}
                         </div>
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
-                                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                                <HashLink
+                                    smooth
+                                    to='/#overview-page'
+                                    className={tab === 'overview' ? 'nav-links selected' : 'nav-links'}
+                                    onClick={closeMobileMenu}>
                                     Overview
-                                </Link>
+                                </HashLink>
                             </li>
                             <li className='nav-item'>
-                                <Link
-                                    to='#'
-                                    className='nav-links'
+                                <HashLink
+                                    smooth
+                                    to='/#contagion-page'
+                                    className={tab === 'contagion' ? 'nav-links selected' : 'nav-links'}
                                     onClick={closeMobileMenu}
                                 >
                                     Contagion
-                                </Link>
+                                </HashLink>
                             </li>
                             <li className='nav-item'>
-                                <Link
-                                    to='#'
-                                    className='nav-links'
+                                <HashLink
+                                    smooth
+                                    to='/#symptoms-page'
+                                    className={tab === 'symptoms' ? 'nav-links selected' : 'nav-links'}
                                     onClick={closeMobileMenu}
                                 >
                                     Symptoms
-                                </Link>
+                                </HashLink>
                             </li>
                             <li className='nav-item'>
-                                <Link
-                                    to='#'
-                                    className='nav-links'
+                                <HashLink
+                                    smooth
+                                    to='/#prevention-page'
+                                    className={tab === 'prevention' ? 'nav-links selected' : 'nav-links'}
                                     onClick={closeMobileMenu}
                                 >
                                     Prevention
-                                </Link>
+                                </HashLink>
                             </li>
                             <li className='nav-btn'>
-                                {button ? (
-                                    <Link to='/sign-up' className='btn-link'>
-                                        <Button buttonStyle='btn--outline'>SIGN UP</Button>
-                                    </Link>
-                                ) : (
-                                    <Link to='/sign-up' className='btn-link'>
-                                        <Button
-                                            buttonStyle='btn--outline'
-                                            buttonSize='btn--mobile'
-                                            onClick={closeMobileMenu}
-                                        >
-                                            SIGN UP
-                                        </Button>
-                                    </Link>
-                                )}
+                                <btn className="btn-tomato-outline">SIGN UP</btn>
                             </li>
                         </ul>
                     </div>

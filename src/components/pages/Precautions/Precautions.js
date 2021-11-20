@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext, useRef } from 'react';
 import './Precautions.css';
 import useWindowDimensions from '../../UseDimensions';
+import tabContext from '../../TabContext';
+import useOnScreen from '../../CheckVisible';
+
 function Precautions() {
-
-    const { height, width } = useWindowDimensions();
-
+    const { setTab } = useContext(tabContext);
+    const { width } = useWindowDimensions();
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
+    if (isVisible) {
+        setTab("prevention");
+    }
     return (
-        <div className='pricing__section'>
-            <div className='pricing__wrapper'>
+        <div className='precautions__section' id="prevention-page" ref={ref}>
+            <div className='precautions__wrapper'>
                 <div className="contagion-header" style={{ textAlign: 'center', width: '100%' }}>
                     <div className="top-line">Covid-19</div>
                     <h1 className="heading dark">What Should We Do</h1>

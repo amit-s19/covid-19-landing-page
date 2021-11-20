@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useRef, useContext } from 'react'
 import './OverviewOne.css';
+import '../../Button.css';
+import tabContext from '../../TabContext';
+import useOnScreen from '../../CheckVisible';
+
 function OverviewOne() {
+    const { setTab } = useContext(tabContext);
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
+    if (isVisible) {
+        setTab("overview");
+    }
     return (
         <>
-            <div className="container-fluid gradient-bg">
-                <div className="row home__hero-row" style={{display: 'flex', flexDirection: 'row'}}>
+            <div className="container-fluid gradient-bg" id="overview-page" ref={ref}>
+                <div className="row home__hero-row" style={{ display: 'flex', flexDirection: 'row' }}>
                     <div className="col pd-left">
                         <div class="home__hero-text-wrapper">
                             <div class="top-line">COVID-19 Alert</div>

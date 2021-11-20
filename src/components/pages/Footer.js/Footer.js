@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { HashLink } from 'react-router-hash-link';
 
 function Footer() {
   return (
@@ -40,10 +41,10 @@ function Footer() {
               COVID-19
             </div>
           </div>
-          <small className='footer-tab-links'>Overview</small>
-          <small className='footer-tab-links'>Symptoms</small>
-          <small className='footer-tab-links'>Prevention</small>
-          <small className='footer-tab-links'>Treatment</small>
+          <HashLink smooth to ="/#overview-page" className='footer-tab-links'>Overview</HashLink>
+          <HashLink smooth to ="/#symptoms-page" className='footer-tab-links'>Symptoms</HashLink>
+          <HashLink smooth to ="/#prevention-page" className='footer-tab-links'>Prevention</HashLink>
+          <HashLink smooth to ="/" className='footer-tab-links'>Treatment</HashLink>
           <div className='social-icons'>
             <img src="images/fb.png" />
             <img src="images/yt.png" />

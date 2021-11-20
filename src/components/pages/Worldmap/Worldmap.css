@@ -1,0 +1,119 @@
+.world-map__section {
+  padding: 0px 0 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.world-map__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.world-map__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.map-container {
+    padding-top: 30px;
+}
+
+.data-select {
+    padding: 10px 50px;
+    border: 3px solid #FA5652;
+    color: #3c3c3c;
+    border-radius: 10px;
+    background-color:#fff;
+}
+
+.data-table {
+    box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(360deg, #FFFBFB -79.45%, #FDFDFD 105.35%);
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+
+.data-table-header {
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-table-header h3 {
+    padding-right: 50px;
+    color: #035755;
+    font-size: 24px;
+}
+
+.pagination-btn-left {
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    color: #FA5652;
+    font-size: 20px;
+}
+
+.pagination-btn-right {
+    padding: 5px 5px 5px 10px;
+    text-align: center;
+    color: #FA5652;
+    font-size: 20px;
+}
+
+.pagination-btns {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 30px rgba(87, 1, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
+.disabled {
+    color: #A2A5B2;
+}
+
+.country-data {
+    display: flex;
+    width: 100%;
+    padding: 10px 40px;
+    justify-content: space-between;
+    color:#035755;
+    font-weight: 600;
+}
+
+  @media screen and (max-width: 768px) {
+    .world-map__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .world-map__container-card {
+      border-bottom: 7px solid #FA5652;
+      width: 90%;
+    }
+  
+    .world-map__wrapper {
+      margin: 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .data-table {
+        margin-left: 0;
+    }
+
+  }
+  

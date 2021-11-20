@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useRef, useContext } from 'react'
 import './OverviewTwo.css';
+import tabContext from '../../TabContext';
+import useOnScreen from '../../CheckVisible';
+
 function OverviewTwo() {
+    const { setTab } = useContext(tabContext);
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
+    if (isVisible) {
+        setTab("overview");
+    }
     return (
         <>
-            <div className="container-fluid white-bg">
+            <div className="container-fluid white-bg" ref={ref}>
                 <div className="row home__hero-row" style={{ flex: 'row', flexDirection: 'row-reverse' }}>
                     <div className="col pd-right">
                         <div className="home__hero-text-wrapper">
