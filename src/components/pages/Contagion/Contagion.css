@@ -1,5 +1,5 @@
 .contagion__section {
-  padding: 0px 0 160px;
+  padding: 100px 0 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@
 .contagion__container-cardInfo {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 700px;
   padding: 24px;
   align-items: center;
 }
@@ -90,9 +90,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .contagion__section {
-    padding-top: 100px;
-  }
   .contagion__container {
     display: flex;
     flex-direction: column;
@@ -104,6 +101,7 @@
   .contagion__container-card {
     border-bottom: 7px solid #FA5652;
     width: 90%;
+    padding-bottom: 500px;
   }
 
   .contagion__wrapper {
@@ -114,7 +112,6 @@
   }
 
   .contagion__container-card:nth-child(2) {
-    transform: scale(1);
     margin: 24px;
   }
 

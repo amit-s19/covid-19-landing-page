@@ -4,10 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 18px;
   position: sticky;
   top: 0;
   z-index: 999;
+  font-family: 'Red Hat Display';
 }
 
 .navbar-container {
@@ -31,7 +32,8 @@
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 19px;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
@@ -51,11 +53,10 @@
 
 .nav-item {
   height: 80px;
-  border-bottom: 2px solid transparent;
 }
 
 .nav-item:hover {
-  border-bottom: 2px solid #f00946;
+  color: #FF383D;
 }
 
 .nav-links {
@@ -65,6 +66,19 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.nav-item > p {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-top: -60px;
+  color: #FF383D;
+}
+
+.nav-links:hover {
+  color: #FF383D;
 }
 
 .selected {
@@ -75,6 +89,10 @@
   display: none;
 }
 
+.nav-btn {
+  margin-left: 30px;
+}
+
 .btn-tomato-outline {
   background-color: transparent;
   padding: 10px 30px;
@@ -82,6 +100,8 @@
   transition:all 0.3s ease-out ;
   color: #FF383D;
   border: 3px solid #FF383D;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .btn-tomato-outline:hover {
@@ -91,7 +111,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
+  .barItems {
     position: relative;
   }
   
@@ -145,6 +165,7 @@
   }
 
   .nav-btn {
+    margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

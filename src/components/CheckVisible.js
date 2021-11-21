@@ -5,7 +5,8 @@ export default function useOnScreen(ref) {
 
   const observer = new IntersectionObserver(
     ([entry]) => setIntersecting(entry.isIntersecting), {
-      threshold: 0
+      root: ref.current,
+      threshold: [0, 0.25, 0.5, 0.75, 1]
     }
   )
 

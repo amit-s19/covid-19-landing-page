@@ -16,14 +16,19 @@ function Worldmap() {
     const [mapData, setMapData] = useState([]);
     const [tableData, setTableData] = useState([]);
     const [pageNumber, setPageNumber] = useState(0);
+    const [hasError, setHasError] = useState(false);
     const pageSize = 7;
 
     useEffect(() => {
         async function getCovidData() {
-            const response = await fetch("https://corona.lmao.ninja/v2/countries?yesterday=&sort=");
-            const body = await response.json();
-            setCovidData(body);
-            generateWorldMap('0');
+            try {
+                setHasError(false);
+                const response = await fetch("https://corona.lmao.ninja/v2/countries?yesterday=&sort=");
+                const body = await response.json();
+                setCovidData(body);
+            } catch (error) {
+                setHasError(true);
+            }
         }
         getCovidData();
     }, []);
@@ -73,9 +78,9 @@ function Worldmap() {
             }
         });
         data2.sort((a, b) => {
-            if (a.value > b.value)
+            if (Number(a.value) > Number(b.value))
                 return -1
-            if (a.value < b.value)
+            if (Number(a.value) < Number(b.value))
                 return 1
             return 0
         })
@@ -113,6 +118,7 @@ function Worldmap() {
                 <div className="contagion-header" style={{ textAlign: 'center', width: '100%' }}>
                     <div className="top-line">Covid-19</div>
                     <h1 className="heading dark">Recent Covid Data</h1>
+                    {hasError ? <p style={{ color: 'red', marginTop: -15, marginBottom: 15 }}>Unable to access api right now! 😭</p> : null}
                     <select class="data-select" onChange={handleSelect}>
                         <option selected disabled>Select type of data</option>
                         <option value="0" >Total Cases</option>

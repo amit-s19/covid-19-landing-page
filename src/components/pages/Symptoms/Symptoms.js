@@ -22,8 +22,12 @@ function Symptoms() {
                 </div>
                 <div className='symptoms__container'>
                     <img src="images/symptoms.png" style={{ maxWidth: '80%' }} />
-                    <img src="images/sleft.png" style={{ maxWidth: '10%', position: 'absolute', left: 50, marginTop: '10%' }} />
-                    <img src="images/sright.png" style={{ maxWidth: '10%', position: 'absolute', right: 50, marginTop: '20%' }} />
+                    <div className="sleft">
+                        <img src="images/sleft.png" />
+                    </div>
+                    <div className="sright">
+                        <img src="images/sright.png" />
+                    </div>
                 </div>
             </div>
         </div>

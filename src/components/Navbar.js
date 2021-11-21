@@ -50,6 +50,7 @@ function Navbar() {
                                     onClick={closeMobileMenu}>
                                     Overview
                                 </HashLink>
+                                {tab === 'overview' ? <p>.</p> : null}
                             </li>
                             <li className='nav-item'>
                                 <HashLink
@@ -60,6 +61,7 @@ function Navbar() {
                                 >
                                     Contagion
                                 </HashLink>
+                                {tab === 'contagion' ? <p>.</p> : null}
                             </li>
                             <li className='nav-item'>
                                 <HashLink
@@ -70,6 +72,8 @@ function Navbar() {
                                 >
                                     Symptoms
                                 </HashLink>
+                                {tab === 'symptoms' ? <p>.</p> : null}
+
                             </li>
                             <li className='nav-item'>
                                 <HashLink
@@ -80,9 +84,11 @@ function Navbar() {
                                 >
                                     Prevention
                                 </HashLink>
+                                {tab === 'prevention' ? <p>.</p> : null}
+
                             </li>
                             <li className='nav-btn'>
-                                <btn className="btn-tomato-outline">SIGN UP</btn>
+                                <btn className="btn-tomato-outline">Contact</btn>
                             </li>
                         </ul>
                     </div>

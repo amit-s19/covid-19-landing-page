@@ -41,9 +41,9 @@ function Footer() {
               COVID-19
             </div>
           </div>
-          <HashLink smooth to ="/#overview-page" className='footer-tab-links'>Overview</HashLink>
-          <HashLink smooth to ="/#symptoms-page" className='footer-tab-links'>Symptoms</HashLink>
-          <HashLink smooth to ="/#prevention-page" className='footer-tab-links'>Prevention</HashLink>
+          <HashLink smooth to ="/" className='footer-tab-links'>Overview</HashLink>
+          <HashLink smooth to ="/" className='footer-tab-links'>Symptoms</HashLink>
+          <HashLink smooth to ="/" className='footer-tab-links'>Prevention</HashLink>
           <HashLink smooth to ="/" className='footer-tab-links'>Treatment</HashLink>
           <div className='social-icons'>
             <img src="images/fb.png" />
