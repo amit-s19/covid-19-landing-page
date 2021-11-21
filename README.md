@@ -1,6 +1,6 @@
 # Covid-19 Fully Responsive Landing Page
 
-## This repo is a mobile first landing page for covid-19 🦠
+## This repo is a mobile first landing page for covid-19 built with React 🦠
 
 ### Features
 - Aesthetic Design
